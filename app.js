@@ -9,12 +9,12 @@
      MOCK DATABASE
      ============================================ */
   var MENU_ITEMS = [
-    { id: 1, name: 'Choco Lanay',        desc: 'Rich chocolate in soft bread.', price: 35, img: 'images/choco_lanay.jpg' },
-    { id: 2, name: 'Spanish Bread',      desc: 'Sweet buttery rolled bread.', price: 25, img: 'images/spanish_bread.jpg' },
-    { id: 3, name: 'Meat Bread',         desc: 'Savory meat-filled bun.', price: 40, img: 'images/meat_bread.jpg' },
-    { id: 4, name: 'Loaf Bread',         desc: 'Fluffy loaf for everyday meals.', price: 65, img: 'images/loaf_bread.jpg' },
-    { id: 5, name: 'Malunggay Pandesal', desc: 'Classic pandesal with malunggay.', price: 30, img: 'images/malunggay_pandesal.jpg' },
-    { id: 6, name: 'Cheese Desal',       desc: 'Soft bread with cheesy center.', price: 32, img: 'images/cheese_desal.jpg' },
+    { id: 1, name: 'Choco Lanay',        desc: 'Rich chocolate in soft bread.', price: 22, img: 'images/choco_lanay.jpg' },
+    { id: 2, name: 'Spanish Bread',      desc: 'Sweet buttery rolled bread.', price: 15, img: 'images/spanish_bread.jpg' },
+    { id: 3, name: 'Meat Bread',         desc: 'Savory meat-filled bun.', price: 25, img: 'images/meat_bread.jpg' },
+    { id: 4, name: 'Loaf Bread',         desc: 'Fluffy loaf for everyday meals.', price: 48, img: 'images/loaf_bread.jpg' },
+    { id: 5, name: 'Malunggay Pandesal', desc: 'Classic pandesal with malunggay.', price: 12, img: 'images/malunggay_pandesal.jpg' },
+    { id: 6, name: 'Cheese Desal',       desc: 'Soft bread with cheesy center.', price: 18, img: 'images/cheese_desal.jpg' },
   ];
 
   var DELIVERY_FEE = 49;

@@ -9,12 +9,12 @@
      MOCK DATABASE
      ============================================ */
   var MENU_ITEMS = [
-    { id: 1, name: 'Choco Lanay',        desc: 'Rich chocolate filling wrapped in soft, golden dough for a sweet merienda favorite.', price: 35, img: 'images/choco_lanay.jpg' },
-    { id: 2, name: 'Spanish Bread',      desc: 'Sweet buttery filling rolled in soft bread, baked until perfectly golden.', price: 25, img: 'images/spanish_bread.jpg' },
-    { id: 3, name: 'Meat Bread',         desc: 'Savory seasoned meat filling inside soft freshly baked bread, great for snacks.', price: 40, img: 'images/meat_bread.jpg' },
-    { id: 4, name: 'Loaf Bread',         desc: 'Soft fluffy loaf bread that is perfect for breakfast, toast, or sandwiches.', price: 65, img: 'images/loaf_bread.jpg' },
-    { id: 5, name: 'Malunggay Pandesal', desc: 'Classic pandesal with malunggay leaves for a hearty and nutritious bite.', price: 30, img: 'images/malunggay_pandesal.jpg' },
-    { id: 6, name: 'Cheese Desal',       desc: 'Soft pandesal-style bread with a cheesy filling and lightly toasted crust.', price: 32, img: 'images/cheese_desal.jpg' },
+    { id: 1, name: 'Choco Lanay',        desc: 'Chocolate-filled, soft, and addictively good.', price: 35, img: 'images/choco_lanay.jpg' },
+    { id: 2, name: 'Spanish Bread',      desc: 'Sweet buttery roll with golden-baked goodness.', price: 25, img: 'images/spanish_bread.jpg' },
+    { id: 3, name: 'Meat Bread',         desc: 'Savory meat filling packed in fluffy bread.', price: 40, img: 'images/meat_bread.jpg' },
+    { id: 4, name: 'Loaf Bread',         desc: 'Soft daily loaf perfect for toast and sandwiches.', price: 65, img: 'images/loaf_bread.jpg' },
+    { id: 5, name: 'Malunggay Pandesal', desc: 'Classic pandesal with a healthy malunggay twist.', price: 30, img: 'images/malunggay_pandesal.jpg' },
+    { id: 6, name: 'Cheese Desal',       desc: 'Cheesy, pillowy bread with a lightly crisp crust.', price: 32, img: 'images/cheese_desal.jpg' },
   ];
 
   var DELIVERY_FEE = 49;

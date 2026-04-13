@@ -1,5 +1,5 @@
 /**
- * Tinapay ni Chan — Client-Side Application
+ * Tinapay ni Bai — Client-Side Application
  * IIFE keeps all variables out of the global scope.
  */
 ;(function () {
@@ -9,22 +9,10 @@
      MOCK DATABASE
      ============================================ */
   var MENU_ITEMS = [
-    { id: 1,  name: 'Classic Butter Croissant', desc: 'Flaky, golden layers of buttery pastry, baked fresh every morning.', price: 120, img: 'https://images.unsplash.com/photo-1555507036-ab1f40ce88f4?auto=format&fit=crop&w=500&q=80' },
-    { id: 2,  name: 'Pain au Chocolat',         desc: 'Classic French pastry filled with two rich dark chocolate batons.', price: 145, img: 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=500&q=80' },
-    { id: 3,  name: 'Ube Cheese Pandesal',       desc: 'Soft Filipino bread rolls stuffed with sweet ube halaya and melting cheese.', price: 85, img: 'https://images.unsplash.com/photo-1579697096985-41fe1430e5df?auto=format&fit=crop&w=500&q=80' },
-    { id: 4,  name: 'Classic Ensaymada',         desc: 'Soft, fluffy brioche topped with buttercream and freshly grated queso de bola.', price: 110, img: 'https://images.unsplash.com/photo-1587248720327-8eb72564be1e?auto=format&fit=crop&w=500&q=80' },
-    { id: 5,  name: 'Almond Croissant',          desc: 'Twice-baked croissant filled with frangipane and topped with toasted almonds.', price: 160, img: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80' },
-    { id: 6,  name: 'Spanish Bread',             desc: 'Sweet, buttery breadcrumb filling rolled inside soft dough and baked golden.', price: 45, img: 'https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=500&q=80' },
-    { id: 7,  name: 'Monay',                     desc: 'Dense, slightly sweet oval bread with a soft crumb — a Filipino merienda staple.', price: 30, img: 'https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=500&q=80' },
-    { id: 8,  name: 'Pan de Coco',               desc: 'Soft, pillowy bun filled with sweetened shredded coconut in every bite.', price: 35, img: 'https://images.unsplash.com/photo-1603532648955-039310d9ed75?auto=format&fit=crop&w=500&q=80' },
-    { id: 9,  name: 'Kalihim (Pan de Regla)',     desc: 'Classic red-filled bread with sweet bukayo or ube jam tucked inside soft dough.', price: 35, img: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=500&q=80' },
-    { id: 10, name: 'Kababayan',                 desc: 'Buttery muffin-shaped Filipino bread with a golden top and tender, slightly sweet crumb.', price: 40, img: 'https://images.unsplash.com/photo-1558303628-e6a6088d8878?auto=format&fit=crop&w=500&q=80' },
-    { id: 11, name: 'Hopia Ube',                 desc: 'Flaky Chinese-Filipino pastry with a creamy purple yam filling in every layer.', price: 55, img: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=500&q=80' },
-    { id: 12, name: 'Hopia Monggo',              desc: 'Traditional mung bean-filled hopia with a delicate, crumbly pastry shell.', price: 50, img: 'https://images.unsplash.com/photo-1620921568483-63e9a1ae55cf?auto=format&fit=crop&w=500&q=80' },
-    { id: 13, name: 'Tasty Bread',               desc: 'Sweet, fluffy sliced loaf — the everyday Filipino breakfast bread, toasted or plain.', price: 65, img: 'https://images.unsplash.com/photo-1574085733277-851d9d856a3a?auto=format&fit=crop&w=500&q=80' },
-    { id: 14, name: 'Putok (Star Bread)',         desc: 'Crunchy sugar-crusted bread with a soft, airy inside — named for its cracked-star shape.', price: 30, img: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=500&q=80' },
-    { id: 15, name: 'Pandesal (6 pcs)',           desc: 'The iconic Filipino morning roll — lightly sweet, best served warm with butter or coffee.', price: 60, img: 'https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=500&q=80' },
-    { id: 16, name: 'Cheese Cupcake',             desc: 'Dense, cheesy Filipino-style cupcake with a golden top and rich cheddar flavor.', price: 45, img: 'https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?auto=format&fit=crop&w=500&q=80' },
+    { id: 1, name: 'Choco Lanay',   desc: 'Rich chocolate filling wrapped in soft, golden dough — a sweet treat loved by all ages.', price: 35, img: 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=500&q=80' },
+    { id: 2, name: 'Spanish Bread', desc: 'Sweet, buttery breadcrumb filling rolled inside soft dough and baked to golden perfection.', price: 25, img: 'https://images.unsplash.com/photo-1598373182133-52452f7691ef?auto=format&fit=crop&w=500&q=80' },
+    { id: 3, name: 'Meat Bread',    desc: 'Savory seasoned meat filling tucked inside soft, freshly baked bread — perfect for merienda.', price: 40, img: 'https://images.unsplash.com/photo-1600398142687-a40640ae511e?auto=format&fit=crop&w=500&q=80' },
+    { id: 4, name: 'Loaf Bread',    desc: 'Soft, fluffy sliced loaf — the everyday Filipino breakfast bread, toasted or plain.', price: 65, img: 'https://images.unsplash.com/photo-1574085733277-851d9d856a3a?auto=format&fit=crop&w=500&q=80' },
   ];
 
   var DELIVERY_FEE = 49;

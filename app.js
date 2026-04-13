@@ -466,6 +466,7 @@
     var isOpen = navLinks.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
     hamburger.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
   navLinks.addEventListener('click', function (e) {
@@ -473,6 +474,16 @@
       navLinks.classList.remove('open');
       hamburger.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900) {
+      navLinks.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
     }
   });
 

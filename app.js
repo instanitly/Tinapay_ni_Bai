@@ -1,13 +1,8 @@
-/**
- * Tinapay ni Bai — Client-Side Application
- * IIFE keeps all variables out of the global scope.
- */
+
 ;(function () {
   'use strict';
 
-  /* ============================================
-     MOCK DATABASE
-     ============================================ */
+  
   var MENU_ITEMS = [
     { id: 1, name: 'Choco Lanay',        desc: 'Rich chocolate in soft bread.', price: 22, img: 'images/choco_lanay.jpg' },
     { id: 2, name: 'Spanish Bread',      desc: 'Sweet buttery rolled bread.', price: 15, img: 'images/spanish_bread.jpg' },
@@ -19,9 +14,7 @@
 
   var DELIVERY_FEE = 49;
 
-  /* ============================================
-     HELPERS
-     ============================================ */
+  
   function qs(sel) { return document.querySelector(sel); }
 
   function el(tag, attrs, children) {
@@ -45,9 +38,7 @@
 
   function formatCurrency(n) { return '\u20B1' + n.toFixed(2); }
 
-  /* ============================================
-     LOCAL STORAGE
-     ============================================ */
+  
   function loadCart() {
     try { return JSON.parse(localStorage.getItem('tnc_cart')) || []; }
     catch (_) { return []; }
@@ -69,9 +60,7 @@
 
   var cart = loadCart();
 
-  /* ============================================
-     DOM REFERENCES
-     ============================================ */
+  
   var authOverlay     = qs('#auth-overlay');
   var authClose       = qs('#auth-close');
   var authForm        = qs('#auth-form');
@@ -116,9 +105,7 @@
   var searchClear     = qs('#search-clear');
   var searchNoResults = qs('#search-no-results');
 
-  /* ============================================
-     AUTH MODE
-     ============================================ */
+  
   var authMode = 'login';
 
   function setAuthMode(mode) {
@@ -211,9 +198,7 @@
     refreshUI();
   });
 
-  /* ============================================
-     MENU RENDERING (event delegation, no globals)
-     ============================================ */
+  
   function renderMenu() {
     menuGrid.innerHTML = '';
 
@@ -249,9 +234,7 @@
     addToCart(Number(btn.dataset.itemId));
   });
 
-  /* ============================================
-     CART LOGIC
-     ============================================ */
+  
   function addToCart(itemId) {
     if (!isLoggedIn()) { showAuth(); return; }
     var existing = cart.find(function (c) { return c.id === itemId; });
@@ -318,7 +301,7 @@
     });
   }
 
-  /* Cart panel open / close */
+  
   function openCart() { cartOverlay.hidden = false; }
   function closeCart() { cartOverlay.hidden = true; }
 
@@ -329,9 +312,7 @@
   cartCloseBtn.addEventListener('click', closeCart);
   cartOverlay.addEventListener('click', function (e) { if (e.target === cartOverlay) closeCart(); });
 
-  /* ============================================
-     CHECKOUT FLOW
-     ============================================ */
+  
   checkoutBtn.addEventListener('click', function () {
     if (cart.length === 0) return;
     if (!isLoggedIn()) { closeCart(); showAuth(); return; }
@@ -400,9 +381,7 @@
     if (e.target === successOverlay) successOverlay.hidden = true;
   });
 
-  /* ============================================
-     UI STATE — strict auth toggle
-     ============================================ */
+  
   function refreshUI() {
     var loggedIn = isLoggedIn();
 
@@ -412,9 +391,7 @@
     renderCart();
   }
 
-  /* ============================================
-     SEARCH
-     ============================================ */
+  
   function toggleSearch() {
     var isOpen = searchBar.hidden;
     searchBar.hidden = !isOpen;
@@ -459,9 +436,7 @@
     searchInput.focus();
   });
 
-  /* ============================================
-     NAVIGATION
-     ============================================ */
+  
   hamburger.addEventListener('click', function () {
     var isOpen = navLinks.classList.toggle('open');
     hamburger.classList.toggle('open', isOpen);
@@ -490,8 +465,6 @@
   browseBtn.addEventListener('click', function () {
     qs('#menu').scrollIntoView({ behavior: 'smooth' });
   });
-
-  // Active link tracking on scroll
   var sections = document.querySelectorAll('section[id]');
   var navLinksAll = document.querySelectorAll('.nav-link');
 
@@ -510,9 +483,7 @@
     });
   });
 
-  /* ============================================
-     CONTACT FORM
-     ============================================ */
+  
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
     var btn = contactForm.querySelector('button[type="submit"]');
@@ -528,10 +499,9 @@
     }, 2500);
   });
 
-  /* ============================================
-     INIT
-     ============================================ */
+  
   renderMenu();
   refreshUI();
 
 })();
+
